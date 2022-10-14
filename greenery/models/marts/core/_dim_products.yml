@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: ""
+    columns:
+      - name: product_id
+        description: "Product UUID"
+
+      - name: name
+        description: "Name of the product"
+
+      - name: price
+        description: "Product price"
+
+      - name: inventory
+        description: "Amount of the inventory of a specific product"
+
