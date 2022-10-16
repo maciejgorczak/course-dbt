@@ -13,15 +13,14 @@ users_bucket as (
     select 
         user_id
         , (user_orders = 1)::int as has_one_purchases
-        , (user_orders = 2)::int as has_two_purchases
-        , (user_orders = 3)::int as has_three_purchases
+        , (user_orders >= 2)::int as two_or_more_purchases
     from orders_cohort
 )
 
-SELECT div0(sum(has_two_purchases), count(distinct user_id)) as repeat_rate
+SELECT div0(sum(two_or_more_purchases), count(distinct user_id)) as repeat_rate
 from users_bucket
 
-0.225806
+79.83%
 
 What are good indicators of a user who will likely purchase again?
 It's all about statistics, right?

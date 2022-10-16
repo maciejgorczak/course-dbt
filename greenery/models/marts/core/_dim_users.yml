@@ -2,10 +2,13 @@ version: 2
 
 models:
   - name: dim_users
-    description: ""
+    description: "User dimension table"
     columns:
       - name: user_id
-        description: "User UUID"
+        description: "User ID"
+        tests:
+          - unique
+          - not_null
 
       - name: first_name
         description: "User's first name"
