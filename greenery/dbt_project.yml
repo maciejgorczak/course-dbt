@@ -35,6 +35,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   greenery:
+    marts:
+      +post-hook:
+        - "grant select on {{ this }} to role reporting"
     staging:
       +materialized: table
 
