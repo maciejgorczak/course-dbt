@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: int_checkout_products
-    description: ""
+    description: "Intermediate table summarizing events, and sessions per product id"
     columns:
       - name: session_id
         description: "Browsing session ID, recurrent"
