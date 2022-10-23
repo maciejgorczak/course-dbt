@@ -8,7 +8,6 @@ SELECT
     DIV0(SUM(order_count), SUM(sessions))
 FROM
     user_order_facts
-
 ____
 
 What's the conversion rate per product?
@@ -21,21 +20,16 @@ select
 from fact_product_views
 group by 1
 order by 4 desc
-
 _____
 
 Macro is under the int_session_agg.sql file for looping through the event_types.
-Hooks
-
 ____
 
 Post hook for granting permission is in the dbt_project.yml file
-
 ____
 
 Packages that are used are dbt_utils and codegen.
 First one is used to enumerate over distinct column entries, second one is used to generate documentation in an automated way.
-
 ____
 
 Snapshot - these three orders below has changed over the last week:
