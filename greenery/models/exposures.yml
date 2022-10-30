@@ -1,0 +1,11 @@
+version: 2
+
+exposures:
+  - name: Funnel Dashboard
+    description: Models critical to funnel dashboard
+    type: dashboard
+    maturity: high
+    owner:
+      name: Maciej Gorczak
+    depends_on:
+      - ref('int_session_events_agg')
